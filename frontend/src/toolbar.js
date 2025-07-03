@@ -11,6 +11,8 @@ export const PipelineToolbar = () => {
                 <DraggableNode type='llm' label='LLM' />
                 <DraggableNode type='customOutput' label='Output' />
                 <DraggableNode type='text' label='Text' />
+                {/* ADD NEW DRAGGABLE NODES */}
+                <DraggableNode type='image' label='Image' />
             </div>
         </div>
     );
