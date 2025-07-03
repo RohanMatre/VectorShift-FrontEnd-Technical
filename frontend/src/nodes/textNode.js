@@ -27,7 +27,7 @@ export const TextNode = ({ id, data }) => {
           onChange={handleTextChange}
           className="nodrag"
           style={{
-            width: "calc(100% - 40px)",
+            width: "calc(100% - 42px)",
             padding: "4px",
             border: "1px solid #ccc",
             borderRadius: "3px",
