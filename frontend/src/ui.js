@@ -10,7 +10,11 @@ import { InputNode } from "./nodes/inputNode";
 import { LLMNode } from "./nodes/llmNode";
 import { OutputNode } from "./nodes/outputNode";
 import { TextNode } from "./nodes/textNode";
-import { ImageNode } from "./nodes/ImageNode";   // NEW IMPORT
+import { ImageNode } from "./nodes/ImageNode"; // NEW IMPORT
+import { ConditionalNode } from "./nodes/ConditionalNode"; // NEW IMPORT
+import { DatabaseNode } from "./nodes/DatabaseNode"; // NEW IMPORT
+import { APINode } from "./nodes/APINode"; // NEW IMPORT
+import { MergeNode } from "./nodes/MergeNode"; // NEW IMPORT
 
 import "reactflow/dist/style.css";
 
@@ -21,7 +25,11 @@ const nodeTypes = {
   llm: LLMNode,
   customOutput: OutputNode,
   text: TextNode,
-  image: ImageNode,  // NEW NODE TYPE
+  image: ImageNode, // NEW NODE TYPE
+  conditional: ConditionalNode, // NEW NODE TYPE
+  database: DatabaseNode, // NEW NODE TYPE
+  api: APINode, // NEW NODE TYPE
+  merge: MergeNode, // NEW NODE TYPE
 };
 
 const selector = (state) => ({
