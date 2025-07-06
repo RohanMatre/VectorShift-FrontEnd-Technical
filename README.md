@@ -49,6 +49,14 @@ frontend_technical_assessment/
             └── MergeNode.js    # Data merge node
 ```
 
+## 🏗️ Architecture Diagram
+
+### System Architecture Flow
+
+![Architecture Diagram](./frontend/public/Architecture%20Diagram.png)
+
+*Complete system architecture showing the integration between React frontend, FastAPI backend, and the node processing pipeline with tech stack relationships.*
+
 ## 🛠️ Prerequisites
 
 - **Node.js** (v14 or higher)
