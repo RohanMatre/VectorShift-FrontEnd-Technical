@@ -53,8 +53,8 @@ async def parse_pipeline(pipeline: PipelinePayload):
 
     print("\n--- Backend Received Data ---")
     print(f"Received {num_nodes} nodes and {num_edges} edges.")
-    print("Nodes Payload:", [n.model_dump() for n in pipeline.nodes]) # Use model_dump() for Pydantic v2+
-    print("Edges Payload:", [e.model_dump() for e in pipeline.edges]) # Use model_dump() for Pydantic v2+
+    print("Nodes Payload:", [n.model_dump() for n in pipeline.nodes]) 
+    print("Edges Payload:", [e.model_dump() for e in pipeline.edges]) 
     print("---------------------------\n")
 
     is_dag = True # Default for empty graphs or if logic below doesn't run

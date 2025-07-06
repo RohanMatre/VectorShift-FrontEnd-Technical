@@ -29,8 +29,6 @@ export const TextNode = ({ id, data, selected }) => {
 
   // Function to extract valid variable names from text
   const extractAndValidateVariables = useCallback((text) => {
-    // Regex to find {{ variableName }} where variableName is a valid JS identifier
-    // (starts with letter, underscore, or dollar sign, followed by alphanumeric or _)
     const regex = /\{\{\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\}\}/g;
     const matches = [...text.matchAll(regex)];
 
@@ -47,8 +45,6 @@ export const TextNode = ({ id, data, selected }) => {
       type: "target",
       position: Position.Left,
       id: varName,
-      // You can add a label if you want the variable name displayed on the handle
-      // label: varName,
     }));
   }, []);
 
@@ -72,8 +68,6 @@ export const TextNode = ({ id, data, selected }) => {
   const debouncedHandleTextChange = useCallback(
     debounce((value) => {
       setCurrText(value);
-      // In a real app, you might also update the data prop for persistence here
-      // updateNodeField(id, 'text', value); // Assuming updateNodeField is available from store
     }, 100),
     []
   ); // Debounce by 100ms
@@ -103,22 +97,22 @@ export const TextNode = ({ id, data, selected }) => {
           ref={textareaRef}
           value={currText}
           onChange={onTextareaChange}
-          onInput={adjustTextareaHeight} // Adjust height immediately on input
-          className="nodrag" // Prevents dragging when interacting with textarea
-          rows={1} // Start with one row
+          onInput={adjustTextareaHeight} 
+          className="nodrag" 
+          rows={1} 
           style={{
-            minWidth: "180px", // Minimum width for the textarea
-            minHeight: "40px", // Minimum height for the textarea
-            resize: "none", // Disable manual resize handle
-            overflowY: "hidden", // Hide scrollbar if content fits
+            minWidth: "180px", 
+            minHeight: "40px", 
+            resize: "none", 
+            overflowY: "hidden", 
             padding: "8px 10px",
             border: "1px solid #d1d5db",
             borderRadius: "4px",
             fontSize: "14px",
-            fontFamily: "inherit", // Inherit font from body/BaseNode
+            fontFamily: "inherit", 
             color: "#333",
-            backgroundColor: "#f8f8f8", // Light background for input
-            boxSizing: "border-box", // Include padding and border in the element's total width and height
+            backgroundColor: "#f8f8f8", 
+            boxSizing: "border-box", 
           }}
         />
       </label>

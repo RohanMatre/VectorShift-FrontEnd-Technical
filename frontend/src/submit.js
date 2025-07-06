@@ -20,10 +20,7 @@ export const SubmitButton = () => {
     const payloadNodes = nodes.map((node) => ({
       id: node.id,
       type: node.type,
-      data: node.data, // Contains nodeType and any text for TextNode etc.
-      // You might need to send position if the backend cares about layout,
-      // but for num_nodes/edges/DAG, it's not strictly necessary.
-      // position: node.position,
+      data: node.data,
     }));
 
     const payloadEdges = edges.map((edge) => ({
