@@ -1,0 +1,6 @@
+# This file is required by Vercel to detect Python dependencies for serverless functions.
+# You can add FastAPI and other dependencies here.
+fastapi
+pydantic
+networkx
+uvicorn
